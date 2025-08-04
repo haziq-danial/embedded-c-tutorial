@@ -1,4 +1,3 @@
-#include <stdint.h>
 #include "global.h"
 
 int32_t GPIO_Init(void) {

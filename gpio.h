@@ -6,9 +6,10 @@
 extern "C" {
 #endif
 
+#define GPIO_ERROR_BASE         0x00003000
 #define GPIO_SUCCESS            0
-#define GPIO_ERROR_RANGE        1
-#define GPIO_ERROR_VALUE        2
+#define GPIO_ERROR_RANGE        (GPIO_ERROR_BASE + 1) //0x00003001
+#define GPIO_ERROR_VALUE        (GPIO_ERROR_BASE + 2) //0x00003002
 
 #define GPIO_MIN                0
 #define GPIO_MAX                13

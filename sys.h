@@ -5,7 +5,8 @@
 extern "C" {
 #endif
 
-#define SYS_SUCCESS       0
+#define SYS_ERROR_BASE      0x00001000
+#define SYS_SUCCESS         0
 #define SYS_Error_Check(x)  if(( SYS_ERROR_NUM = (x)) != 0) SYS_Fatal_Error(SYS_ERROR_NUM)
 
 extern int32_t SYS_ERROR_NUM;

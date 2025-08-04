@@ -7,10 +7,13 @@ int32_t SYS_ERROR_NUM;
 void SYS_Fatal_Error(int32_t err) {
   DDRB |= 0x20;
   PORTB |= 0x20;
+  Serial.println(err);
   for(;;);
 }
 
 void SYS_Init(void) {
+  Serial.begin(9600);
+
   SYS_ERROR_NUM = GPIO_Init();
   if(SYS_ERROR_NUM != GPIO_SUCCESS) SYS_Fatal_Error(SYS_ERROR_NUM);
 

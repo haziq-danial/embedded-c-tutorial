@@ -1,6 +1,6 @@
 #include "global.h"
 
-#define LED_DEBUG_PIN   13
+#define LED_DEBUG_PIN   20
 #define SYS_Error_Check(x)  if(( SYS_ERROR_NUM = (x)) != 0) SYS_Fatal_Error(SYS_ERROR_NUM)
 
 int32_t SYS_ERROR_NUM;
@@ -27,6 +27,8 @@ void SYS_Init(void) {
 
 int main(void) {
   volatile uint32_t delay;
+
+  SYS_Init();
 
   for(;;) {
     GPIO_Write(LED_DEBUG_PIN, GPIO_HIGH);
